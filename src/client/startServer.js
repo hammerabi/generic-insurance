@@ -1,34 +1,32 @@
-var path = require("path");
-var express = require("express");
-var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
-var compression = require("compression");
+const bodyParser = require("body-parser");
+const methodOverride = require("method-override");
+const compression = require("compression");
 
 
 module.exports = {
   start: function(prodMode) {
 
-    var env = {
+    const env = {
       production: process.env.NODE_ENV === "production"
     };
 
-    var express = require("express");
-    var app = express();
+    const express = require("express");
+    const app = express();
     app.use(compression())
     app.set("view engine", "ejs");
     app.set("views", __dirname + "/views");
-    app.use(bodyParser.urlencoded({ extended: false }))
+    app.use(bodyParser.urlencoded({extended: false}))
     app.use(bodyParser.json())
     app.use(methodOverride())
 
-    var port = Number(process.env.PORT || 8080);
+    const port = Number(process.env.PORT || 8080);
 
     if (!env.production) {
-      var webpack = require("webpack");
-      var webpackMiddleware = require("webpack-dev-middleware");
-      var webpackHotMiddleware = require("webpack-hot-middleware");
-      var config = require("../../webpack.dev.config.js");
-      var compiler = webpack(config);
+      const webpack = require("webpack");
+      const webpackMiddleware = require("webpack-dev-middleware");
+      const webpackHotMiddleware = require("webpack-hot-middleware");
+      const config = require("../../webpack.dev.config.js");
+      const compiler = webpack(config);
 
       app.use(webpackMiddleware(compiler, {
         publicPath: config.output.publicPath,
