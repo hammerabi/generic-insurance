@@ -1,0 +1,22 @@
+{
+  "name": "generic-insurance",
+  "version": "0.0.1",
+  "description": "Application for generating custom insurance policies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hammerabi/docker-django.git"
+  },
+  "author": "Josh Butcher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hammerabi/docker-django/issues"
+  },
+  "homepage": "https://github.com/hammerabi/docker-django#readme",
+  "dependencies": {
+    "webpack": "^3.10.0"
+  }
+}
