@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     #Your apps go here
     #...
     'my_app',
-
+    'generic_insurance',
 
     #Your libraries go here
     #...

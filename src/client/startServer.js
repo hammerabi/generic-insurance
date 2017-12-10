@@ -2,7 +2,9 @@ const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const compression = require("compression");
 
-
+/*
+TODO: Refactor the eslint suggestions here.
+*/
 module.exports = {
   start: function(prodMode) {
 

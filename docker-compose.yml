@@ -4,12 +4,14 @@ services:
     image: postgres
   web:
     build: .
+    restart: always
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app
     ports:
       - "8000:8000"
     environment:
+      DATABASE_HOST: db
       DATABASE_URL: postgres://app@postgres:5432/app
     depends_on:
       - db
