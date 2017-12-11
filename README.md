@@ -56,18 +56,8 @@ DRF is configured with a basic HTTP auth, so you'll need to run a
 ```
 ./manage.py createsuperuser
 ```
-
+# Start the frontend:
+```
+npm install && npm start
+```
 --------------------------------------------------------------------------------
-
-# Stack:
-
-#### Python 2.7.9
-
-#### Django 1.10
-
-#### postgres:latest
-
-## Stay tuned for some new branches that will:
-#### Integrate Elasticsearch + Haystack
-#### Integrate Node/Webpack and React as a view layer
-#### REDIS
